@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8635135E-6FCE-4F37-BF02-9EAB653DEF94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Engine</RootNamespace>
+    <AssemblyName>Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GongSolutions.WPF.DragDrop, Version=2.0.0.0, Culture=neutral, PublicKeyToken=91f1945125b7a587, processorArchitecture=MSIL">
+      <HintPath>..\packages\gong-wpf-dragdrop.2.3.1\lib\net47\GongSolutions.WPF.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=4.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.12.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Kinect\v1.8\Assemblies\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjParser">
+      <HintPath>..\Surface Editor\ObjParser.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WriteableBitmapEx.Wpf, Version=1.6.7.0, Culture=neutral, PublicKeyToken=50375ca6144f1c69, processorArchitecture=MSIL">
+      <HintPath>..\packages\WriteableBitmapEx.1.6.7\lib\net40\WriteableBitmapEx.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IIntersectable.cs" />
+    <Compile Include="AbstractModels\3DModel.cs" />
+    <Compile Include="AbstractModels\3DObject.cs" />
+    <Compile Include="Models\ObjModel.cs" />
+    <Compile Include="Models\ParametricModel.cs" />
+    <Compile Include="Models\PredefinedModels\AstroidalEllipsoid.cs" />
+    <Compile Include="Models\BezierCurve.cs" />
+    <Compile Include="Models\BezierCurveC2.cs" />
+    <Compile Include="Models\Cursor3D.cs" />
+    <Compile Include="AbstractModels\Curve.cs" />
+    <Compile Include="Models\CylindricalBezierPatch.cs" />
+    <Compile Include="Models\CylindricalBezierPatchC2.cs" />
+    <Compile Include="Models\PredefinedModels\BohemianDome.cs" />
+    <Compile Include="Models\PredefinedModels\Coil.cs" />
+    <Compile Include="Models\PredefinedModels\Cornucopia.cs" />
+    <Compile Include="Models\PredefinedModels\Cross-Cap.cs" />
+    <Compile Include="Models\PredefinedModels\Ellipsoid.cs" />
+    <Compile Include="Models\ArtificialPoint3D.cs" />
+    <Compile Include="Models\GregoryPatch.cs" />
+    <Compile Include="Models\PredefinedModels\Grid.cs" />
+    <Compile Include="Models\InterpolationCurve.cs" />
+    <Compile Include="Models\IntersectionCurve.cs" />
+    <Compile Include="Interfaces\IObjectable.cs" />
+    <Compile Include="Interfaces\ISelectable.cs" />
+    <Compile Include="Models\PredefinedModels\Figure-8.cs" />
+    <Compile Include="Models\PredefinedModels\Horn.cs" />
+    <Compile Include="Models\PredefinedModels\KleinBottle.cs" />
+    <Compile Include="Models\ShiftedSurface.cs" />
+    <Compile Include="Models\StaticObjModel.cs" />
+    <Compile Include="Models\MeshObjModel.cs" />
+    <Compile Include="Models\PredefinedModels\Elasticity.cs" />
+    <Compile Include="Models\PredefinedModels\MorinsSurface.cs" />
+    <Compile Include="Models\PredefinedModels\Pear.cs" />
+    <Compile Include="Models\PredefinedModels\Sea-Shell.cs" />
+    <Compile Include="Models\PredefinedModels\Sphere.cs" />
+    <Compile Include="Models\RectangularBezierPatch.cs" />
+    <Compile Include="Models\RectangularBezierPatchC2.cs" />
+    <Compile Include="Models\PredefinedModels\SineTorus.cs" />
+    <Compile Include="AbstractModels\SurfacePatch.cs" />
+    <Compile Include="Models\Point3D.cs" />
+    <Compile Include="Models\PredefinedModels\Torus.cs" />
+    <Compile Include="Models\Voxel.cs" />
+    <Compile Include="Models\VoxelGrid.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer.cs" />
+    <Compile Include="Utilities\Bresenham.cs" />
+    <Compile Include="Utilities\ElephantPathHelper.cs" />
+    <Compile Include="Utilities\EnvelopeConnector.cs" />
+    <Compile Include="Utilities\FloodFill.cs" />
+    <Compile Include="Utilities\ImprovedFloodFill.cs" />
+    <Compile Include="Utilities\Intersector.cs" />
+    <Compile Include="Utilities\KinectScanner.cs" />
+    <Compile Include="Utilities\Loader.cs" />
+    <Compile Include="Utilities\MarchingCubes.cs" />
+    <Compile Include="Utilities\Cameras\PointCamera.cs" />
+    <Compile Include="Utilities\Edge.cs" />
+    <Compile Include="Utilities\Cameras\Camera.cs" />
+    <Compile Include="Utilities\Cameras\ICamera.cs" />
+    <Compile Include="Utilities\Maths\EquationSystem.cs" />
+    <Compile Include="Utilities\Maths\Matrix4.cs" />
+    <Compile Include="Utilities\Maths\MatrixInverter.cs" />
+    <Compile Include="Utilities\Maths\NewtonRaphsonSolver.cs" />
+    <Compile Include="Utilities\PathGenerator.cs" />
+    <Compile Include="Utilities\Projection.cs" />
+    <Compile Include="Utilities\SpaceManager.cs" />
+    <Compile Include="Utilities\Maths\Vector4.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

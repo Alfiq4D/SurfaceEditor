@@ -1,0 +1,79 @@
+﻿<Window x:Class="Surface_Editor.PatchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Surface_Editor"
+        mc:Ignorable="d"
+        xml:space="preserve"
+        Title="PatchWindow" Height="200" Width="250" WindowStyle="ToolWindow" Background="Gray" ResizeMode="NoResize">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" LastChildFill="False">
+            <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                <RadioButton Name="Rectangle" GroupName="PatchType" IsChecked="True" Checked="Rectangle_Checked">Rectangle</RadioButton>
+            </DockPanel>
+            <Grid DockPanel.Dock="Top" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" DockPanel.Dock="Left" HorizontalAlignment="Center"> Size </TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" DockPanel.Dock="Left" HorizontalAlignment="Right"> u: </TextBlock>
+                <TextBox Grid.Column="2" Grid.Row="0" Width="40" Text="{Binding U, Mode=TwoWay}"></TextBox>
+                <TextBlock Grid.Column="3" Grid.Row="0" DockPanel.Dock="Left" HorizontalAlignment="Right"> v: </TextBlock>
+                <TextBox Grid.Column="4" Grid.Row="0" Width="40" Text="{Binding V, Mode=TwoWay}"></TextBox>
+                
+                <TextBlock Grid.Column="0" Grid.Row="1" DockPanel.Dock="Left" HorizontalAlignment="Center"> Parameters </TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" DockPanel.Dock="Left" HorizontalAlignment="Right"> width: </TextBlock>
+                <TextBox Grid.Column="2" Grid.Row="1" Width="40" Text="{Binding RectangleWidth, Mode=TwoWay}"></TextBox>
+                <TextBlock Grid.Column="3" Grid.Row="1" DockPanel.Dock="Left" HorizontalAlignment="Right"> height: </TextBlock>
+                <TextBox Grid.Column="4" Grid.Row="1" Width="40" Text="{Binding RectangleHeight, Mode=TwoWay}"></TextBox>
+            </Grid>
+        </DockPanel>
+        <DockPanel Grid.Row="1" LastChildFill="False">
+            <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                <RadioButton Name="Cylinder" GroupName="PatchType" Checked="Cylinder_Checked">Cylinder</RadioButton>
+            </DockPanel>
+             <Grid DockPanel.Dock="Top"  Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" DockPanel.Dock="Left" HorizontalAlignment="Center"> Size </TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" DockPanel.Dock="Left" HorizontalAlignment="Right"> u: </TextBlock>
+                <TextBox Grid.Column="2" Grid.Row="0" Width="40" Text="{Binding U, Mode=TwoWay}"></TextBox>
+                <TextBlock Grid.Column="3" Grid.Row="0" DockPanel.Dock="Left" HorizontalAlignment="Right"> v: </TextBlock>
+                <TextBox Grid.Column="4" Grid.Row="0" Width="40" Text="{Binding V, Mode=TwoWay}"></TextBox>
+                
+                <TextBlock Grid.Column="0" Grid.Row="1" DockPanel.Dock="Left" HorizontalAlignment="Center"> Parameters </TextBlock>               
+                <TextBlock Grid.Column="1" Grid.Row="1" DockPanel.Dock="Left" HorizontalAlignment="Right"> height: </TextBlock>
+                <TextBox Grid.Column="2" Grid.Row="1" Width="40" Text="{Binding CylinderHeight, Mode=TwoWay}"></TextBox>
+                <TextBlock Grid.Column="3" Grid.Row="1" DockPanel.Dock="Left" HorizontalAlignment="Right"> radius: </TextBlock>
+                <TextBox Grid.Column="4" Grid.Row="1" Width="40" Text="{Binding CylinderRadius, Mode=TwoWay}"></TextBox>
+            </Grid>
+        </DockPanel>
+        <DockPanel Grid.Row="2" LastChildFill="False">
+            <Button Margin="20,0,0,0" DockPanel.Dock="Left" IsCancel="True">Cancel</Button>
+            <Button Name="Confirm" Margin="0,0,20,0" DockPanel.Dock="Right" IsDefault="True" Click="Confirm_Click">Create</Button>
+        </DockPanel>
+    </Grid>
+</Window>

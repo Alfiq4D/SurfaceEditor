@@ -1,0 +1,39 @@
+﻿<Window x:Class="Surface_Editor.SelectModelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Surface_Editor"
+        mc:Ignorable="d"
+        xml:space="preserve"
+        Title="SelectModelWindow" Height="330" Width="200" WindowStyle="ToolWindow" Background="Gray" ResizeMode="NoResize">
+    <Grid Margin="5">
+         <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="False" Grid.Row="0">
+            <TextBlock DockPanel.Dock="Top">Select predefined model:</TextBlock>
+            <RadioButton Name="Torus" DockPanel.Dock="Top" GroupName="Models" IsChecked="True" Checked="Torus_Checked">Torus</RadioButton>
+            <RadioButton Name="AstroidalEllipsoid" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="AstroidalEllipsoid_Checked">Astroidal Ellipsoid</RadioButton>
+            <RadioButton Name="BohemianDome" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="BohemianDome_Checked">Bohemian Dome</RadioButton>
+            <RadioButton Name="Coil" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Coil_Checked">Coil</RadioButton>
+            <RadioButton Name="Cornucopia" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Cornucopia_Checked">Cornucopia</RadioButton>
+            <RadioButton Name="Cross_Cap" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Cross_Cap_Checked">Cross-Cap</RadioButton>
+            <RadioButton Name="Elasticity" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Elasticity_Checked">Elasticity</RadioButton>
+            <RadioButton Name="Ellipsoid" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Ellipsoid_Checked">Ellipsoid</RadioButton>
+            <RadioButton Name="Figure8" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Figure8_Checked">Figure-8</RadioButton>
+            <RadioButton Name="Horn" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Horn_Checked">Horn</RadioButton>
+            <RadioButton Name="KlainBottle" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="KlainBottle_Checked">Klain Bottle</RadioButton>
+            <RadioButton Name="MorinsSurface" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="MorinsSurface_Checked">Morins Surface</RadioButton>
+            <RadioButton Name="Pear" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Pear_Checked">Pear</RadioButton>
+            <RadioButton Name="Sea_Shell" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Sea_Shell_Checked">Sea-Shell</RadioButton>
+            <RadioButton Name="SineTorus" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="SineTorus_Checked">Sine Torus</RadioButton>
+            <RadioButton Name="Sphere" DockPanel.Dock="Top" GroupName="Models" IsChecked="False" Checked="Sphere_Checked">Sphere</RadioButton>
+        </DockPanel>
+        <DockPanel Grid.Row="1" LastChildFill="False">
+            <Button Margin="20,0,0,0" DockPanel.Dock="Left" IsCancel="True" VerticalAlignment="Center">Cancel</Button>
+            <Button Name="Confirm" Margin="0,0,20,0" DockPanel.Dock="Right" IsDefault="True" Click="Confirm_Click" VerticalAlignment="Center">Create</Button>
+        </DockPanel>
+    </Grid>
+</Window>

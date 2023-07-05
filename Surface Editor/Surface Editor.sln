@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Surface Editor", "Surface Editor\Surface Editor.csproj", "{14ADDE9A-5B7B-431F-8B05-D4B0EBD33016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{8635135E-6FCE-4F37-BF02-9EAB653DEF94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14ADDE9A-5B7B-431F-8B05-D4B0EBD33016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14ADDE9A-5B7B-431F-8B05-D4B0EBD33016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14ADDE9A-5B7B-431F-8B05-D4B0EBD33016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14ADDE9A-5B7B-431F-8B05-D4B0EBD33016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8635135E-6FCE-4F37-BF02-9EAB653DEF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8635135E-6FCE-4F37-BF02-9EAB653DEF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8635135E-6FCE-4F37-BF02-9EAB653DEF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8635135E-6FCE-4F37-BF02-9EAB653DEF94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A52546EE-F884-4497-9906-8ECDF7E4EE97}
+	EndGlobalSection
+EndGlobal

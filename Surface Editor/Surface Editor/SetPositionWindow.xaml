@@ -1,0 +1,44 @@
+﻿<Window x:Class="Surface_Editor.SetPositionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Surface_Editor"
+        mc:Ignorable="d"
+        xml:space="preserve"
+        Title="SetPositionWindow" Height="200" Width="250" WindowStyle="ToolWindow" Background="Gray" ResizeMode="NoResize">
+    <Grid Margin="5,-2,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1.1*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Name="Info" Foreground="Red" FontSize="10" Visibility="Collapsed">Check something</TextBlock>
+        <DockPanel Grid.Row="1">
+            <CheckBox Name="SetX" Content="Set x position" VerticalAlignment="Center" IsChecked="{Binding SetXEnable, Mode=TwoWay}" Checked="Set_Checked"></CheckBox>
+            <TextBlock VerticalAlignment="Center" Margin="20,0,0,0">X = </TextBlock>
+            <TextBox VerticalAlignment="Center" Text="{Binding XVal, Mode=TwoWay}"></TextBox>
+        </DockPanel>
+        <DockPanel Grid.Row="2">
+            <CheckBox Name="SetY" Content="Set y position" VerticalAlignment="Center"  IsChecked="{Binding SetYEnable, Mode=TwoWay}" Checked="Set_Checked"></CheckBox>
+            <TextBlock VerticalAlignment="Center" Margin="20,0,0,0">Y = </TextBlock>
+            <TextBox VerticalAlignment="Center" Text="{Binding YVal, Mode=TwoWay}"></TextBox>
+        </DockPanel>
+        <DockPanel Grid.Row="3">
+            <CheckBox Name="SetZ" Content="Set z position" VerticalAlignment="Center"  IsChecked="{Binding SetZEnable, Mode=TwoWay}" Checked="Set_Checked"></CheckBox>
+            <TextBlock VerticalAlignment="Center" Margin="20,0,0,0">Z = </TextBlock>
+            <TextBox VerticalAlignment="Center" Text="{Binding ZVal, Mode=TwoWay}"></TextBox>
+        </DockPanel>
+         <DockPanel Grid.Row="4" LastChildFill="False">
+            <RadioButton Name="FromList"  Margin="0,0,0,0" DockPanel.Dock="Top" GroupName="Source" HorizontalAlignment="Center" IsChecked="True" Checked="FromList_Checked">From list view </RadioButton>
+            <RadioButton Name="FromSelection" Margin="0,0,0,0" DockPanel.Dock="Top" GroupName="Source" HorizontalAlignment="Center" Checked="FromSelection_Checked">From selection</RadioButton>
+        </DockPanel>
+        <DockPanel Grid.Row="5" LastChildFill="False">
+            <Button Margin="20,0,0,0" DockPanel.Dock="Left" IsCancel="True" Width="50">Cancel</Button>
+            <Button Name="Confirm" Margin="0,0,20,0" DockPanel.Dock="Right" IsDefault="True" Click="Confirm_Click" Width="50">Set</Button>
+        </DockPanel>
+    </Grid>
+</Window>
